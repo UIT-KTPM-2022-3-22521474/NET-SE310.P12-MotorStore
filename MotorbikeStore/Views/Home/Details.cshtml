@@ -1,0 +1,15 @@
+﻿@model MotorbikeStore.Models.Motorbike
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Motorbike Details";
+}
+
+<div class="container d-flex flex-column align-items-center">
+    <h2 class="text-center">@Model.Name</h2>
+    <img src="~/images/@Model.ImageUrl" alt="@Model.Name" class="img-fluid mb-3" style="max-width: 1000px; height: 500px;" />
+    <p class="text-center"><strong>Brand:</strong> @Model.Brand</p>
+    <p class="text-center"><strong>Description:</strong> @Model.Description</p>
+    <p class="text-center"><strong>Price:</strong> @Model.Price.ToString("C", new CultureInfo("vi-VN"))</p>
+    <a href="/" class="btn btn-secondary">Back to List</a>
+</div>
